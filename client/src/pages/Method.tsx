@@ -5,7 +5,7 @@ import { Section } from "@/components/Section";
 import { Footer } from "@/components/Footer";
 import { ArrowRight, Check, Compass, Heart, Wrench } from "lucide-react";
 import { motion, useInView } from "framer-motion";
-import { MEETNORMAN_URL, CHARACTERX_URL, NEXTMONTH_URL, SCORECARD_URL } from "@/lib/constants";
+import { MEETNORMAN_URL, NEXTMONTH_URL, SCORECARD_URL, BOOK_URL, BOOK_TITLE, BOOK_PRICE_GBP } from "@/lib/constants";
 
 // Animation variants for scroll-triggered animations
 const fadeInUp = {
@@ -365,7 +365,7 @@ export default function Method() {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href={CHARACTERX_URL} target="_blank" rel="noopener noreferrer">
+                  <a href={BOOK_URL} target="_blank" rel="noopener noreferrer">
                     Get the Book
                   </a>
                 </Button>
@@ -461,6 +461,20 @@ export default function Method() {
             <ChapterItem number={9} title="Transformation Timeline" description="Time as character" />
             <ChapterItem number={10} title="Climactic Moment" description="The identity breakthrough" />
           </div>
+          <AnimatedSection className="mt-8 max-w-2xl">
+            <p className="text-sm text-muted-foreground">
+              The methodology is documented in{" "}
+              <a
+                href={BOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="italic text-foreground underline decoration-border underline-offset-4 hover:decoration-accent transition-colors"
+              >
+                {BOOK_TITLE}
+              </a>{" "}
+              — paperback, {BOOK_PRICE_GBP} on Amazon.
+            </p>
+          </AnimatedSection>
         </Section>
 
         {/* SECTION 4: Real-world examples */}
@@ -682,7 +696,7 @@ export default function Method() {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <a href={CHARACTERX_URL} target="_blank" rel="noopener noreferrer">
+                  <a href={BOOK_URL} target="_blank" rel="noopener noreferrer">
                     Get the CharacterX book
                   </a>
                 </Button>
