@@ -1,7 +1,0 @@
-# Netlify config for the standalone robhutt.com static site.
-# This site lives in the robhutt-com/ subdirectory of the repo, so in the
-# Netlify UI set "Base directory" to: robhutt-com
-# Netlify then reads this file from that base and publishes the same folder.
-[build]
-  publish = "."
-  command = ""
