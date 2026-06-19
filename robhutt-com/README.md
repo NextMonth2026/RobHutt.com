@@ -47,8 +47,7 @@ Search `index.html` for `TODO`:
 
 1. **Booking link** — replace `REPLACE_WITH_YOUR_CALENDAR_LINK` in the
    `Book a conversation` button.
-2. **Email** — replace `REPLACE_WITH_YOUR_EMAIL` in the `mailto:` and the
-   visible link text `your@email.com`.
+2. **Email** — contact actions route to `hello@nextmonth.io` and CC `rob@flashbuzz.co.uk`.
 3. **Videos** — drop `reel-01.mp4` … `reel-04.mp4` into `assets/video/`,
    then uncomment the matching `<source>` line inside each `<video>`. Slots
    stay in placeholder state until a `<source>` is present.
