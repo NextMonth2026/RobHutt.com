@@ -157,32 +157,6 @@
   .ask .foot{margin-top:54px;font-size:1.12rem;line-height:1.6;max-width:48ch;color:rgba(13,11,8,.72)}
   .ask .foot em{font-style:italic;color:var(--ink);font-weight:600}
 
-  .collage{padding:3vh 0 14vh;position:relative;overflow:hidden}
-  .collage::before{
-    content:"";position:absolute;inset:8vh 0 auto 0;height:62%;z-index:-1;
-    background:linear-gradient(90deg,rgba(154,58,31,.12),rgba(200,150,42,.16),rgba(154,58,31,.08));
-    transform:skewY(-3deg);
-  }
-  .collage .copy{padding:0 6vw 34px;max-width:1020px}
-  .collage h2{font-size:clamp(2rem,5vw,4.2rem);line-height:1.02;font-weight:300;letter-spacing:-.035em;max-width:14ch}
-  .collage h2 em{font-style:italic;font-weight:900;color:var(--gold)}
-  .collage p{margin-top:18px;font-size:1.08rem;line-height:1.62;color:rgba(13,11,8,.68);max-width:54ch}
-  .photo-collage{
-    width:min(1500px,94vw);margin:0 auto;padding:clamp(12px,2vw,28px);
-    display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(78px,9vw,142px);gap:clamp(8px,1.15vw,18px);
-    background:rgba(255,252,246,.38);border:1px solid rgba(13,11,8,.1);border-radius:18px;
-    box-shadow:0 30px 90px rgba(42,26,10,.16);
-  }
-  .tile{position:relative;overflow:hidden;border-radius:clamp(10px,1.2vw,22px);background:#d8c9b4;box-shadow:0 18px 34px rgba(42,26,10,.18);transform:rotate(var(--r));transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s;isolation:isolate}
-  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(13,11,8,.12));mix-blend-mode:multiply;pointer-events:none}
-  .tile img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92) contrast(1.03);transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
-  .tile:hover{transform:rotate(0deg) translateY(-6px) scale(1.02);box-shadow:0 28px 56px rgba(42,26,10,.25);z-index:3}
-  .tile:hover img{transform:scale(1.08);filter:saturate(1.06) contrast(1.05)}
-  .t1{grid-column:1/4;grid-row:1/3;--r:-2.2deg}.t2{grid-column:4/7;grid-row:1/2;--r:1.4deg}.t3{grid-column:7/10;grid-row:1/3;--r:-1deg}.t4{grid-column:10/13;grid-row:1/2;--r:2.4deg}
-  .t5{grid-column:4/6;grid-row:2/4;--r:-3deg}.t6{grid-column:6/8;grid-row:3/5;--r:2deg}.t7{grid-column:8/11;grid-row:3/4;--r:-1.8deg}.t8{grid-column:11/13;grid-row:2/4;--r:1.2deg}
-  .t9{grid-column:1/3;grid-row:3/5;--r:2.8deg}.t10{grid-column:3/6;grid-row:4/6;--r:-1.2deg}.t11{grid-column:8/10;grid-row:4/6;--r:2.1deg}.t12{grid-column:10/13;grid-row:4/6;--r:-2.5deg}
-  .t13{grid-column:1/4;grid-row:6/8;--r:1.5deg}.t14{grid-column:4/7;grid-row:6/7;--r:-1.5deg}.t15{grid-column:7/9;grid-row:6/8;--r:2.5deg}.t16{grid-column:9/13;grid-row:6/8;--r:-.8deg}
-  .t17{grid-column:1/3;grid-row:8/9;--r:-2deg}.t18{grid-column:3/6;grid-row:7/9;--r:1deg}.t19{grid-column:6/9;grid-row:8/9;--r:-1deg}.t20{grid-column:9/13;grid-row:8/9;--r:1.8deg}
   .connect{
     margin:6vh 6vw;padding:15vh 8vw;border-radius:6px;
     background:
@@ -215,12 +189,6 @@
     nav{padding:18px 6vw}
     nav .say{display:none}
 
-    .collage{padding-bottom:10vh}
-    .collage .copy{padding-bottom:22px}
-    .photo-collage{grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(86px,22vw,132px);width:92vw}
-    .tile{grid-column:auto!important;grid-row:auto!important;min-height:0}
-    .t1,.t3,.t10,.t12,.t13,.t16,.t18{grid-column:span 3!important;grid-row:span 2!important}
-    .t2,.t4,.t5,.t6,.t7,.t8,.t9,.t11,.t14,.t15,.t17,.t19,.t20{grid-column:span 2!important;grid-row:span 1!important}
     .ask li{gap:18px}
     .ask li .n{min-width:28px}
   }
@@ -253,35 +221,6 @@
   <div class="tag">The short version</div>
   <p>Every business is telling a story. Most of them are telling it <em>badly</em>.</p>
   <p class="thread">I started in communications and innovation at the Met Office, then spent a decade building businesses, directing films and developing intellectual property of my own. That work converged into <em>CharacterX</em>, a methodology rooted in cinematic storytelling that treats the customer as the protagonist and the brand as the guide, and into NextMonth, the platform I am building to put that method to work. The CV has the facts. This page is for the parts that do not fit on one.</p>
-</section>
-<section class="collage reveal" aria-labelledby="collage-title">
-  <div class="copy">
-    <div class="tag">A life in frames</div>
-    <h2 id="collage-title">Fragments of the <em>story</em>, mixed together.</h2>
-    <p>A layered collage of film stills, behind-the-scenes moments, portraits and festival laurels — deliberately shuffled, because the interesting part is how the pieces connect.</p>
-  </div>
-  <div class="photo-collage" aria-label="Mixed collage of Rob Hutt images">
-    <figure class="tile t1"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324184/IMG_3863_vzmj9f.jpg" alt="Rob Hutt story collage image 1" loading="lazy"></figure>
-    <figure class="tile t2"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324182/IMG_3860_maoikq.jpg" alt="Rob Hutt story collage image 2" loading="lazy"></figure>
-    <figure class="tile t3"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324175/IMG_2302_kqzjp9.jpg" alt="Rob Hutt story collage image 3" loading="lazy"></figure>
-    <figure class="tile t4"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324176/IMG_2305_utepd3.jpg" alt="Rob Hutt story collage image 4" loading="lazy"></figure>
-    <figure class="tile t5"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324171/IMG_1920_f1ve3l.jpg" alt="Rob Hutt story collage image 5" loading="lazy"></figure>
-    <figure class="tile t6"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324165/IMG_9671_wtwsdb.jpg" alt="Rob Hutt story collage image 6" loading="lazy"></figure>
-    <figure class="tile t7"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324165/IMG_9672_nk4dvo.jpg" alt="Rob Hutt story collage image 7" loading="lazy"></figure>
-    <figure class="tile t8"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324165/IMG_9668_tbr5ep.jpg" alt="Rob Hutt story collage image 8" loading="lazy"></figure>
-    <figure class="tile t9"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324165/IMG_9670_dqikpi.jpg" alt="Rob Hutt story collage image 9" loading="lazy"></figure>
-    <figure class="tile t10"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324163/IMG_9660_hsmqmj.jpg" alt="Rob Hutt story collage image 10" loading="lazy"></figure>
-    <figure class="tile t11"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324161/IMG_7080_lmru6b.jpg" alt="Rob Hutt story collage image 11" loading="lazy"></figure>
-    <figure class="tile t12"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1768324156/0508c79a-d2e6-4d5c-a030-bad69740a5e2_m7ohet.jpg" alt="Rob Hutt story collage image 12" loading="lazy"></figure>
-    <figure class="tile t13"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1744817017/1Y9A1126_efqqme.jpg" alt="Rob Hutt story collage image 13" loading="lazy"></figure>
-    <figure class="tile t14"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1744817003/1Y9A1677_z0yuup.jpg" alt="Rob Hutt story collage image 14" loading="lazy"></figure>
-    <figure class="tile t15"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1744816992/1Y9A2030_jmf0lu.jpg" alt="Rob Hutt story collage image 15" loading="lazy"></figure>
-    <figure class="tile t16"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1744816990/1Y9A2075_nfztfn.jpg" alt="Rob Hutt story collage image 16" loading="lazy"></figure>
-    <figure class="tile t17"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1744816930/IX_Fin-AN_Mar2023_-_Gold_pgtetp.png" alt="Rob Hutt story collage image 17" loading="lazy"></figure>
-    <figure class="tile t18"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1744816755/Finalist_Best_Short_Film_-_Beyond_Hollywood_International_Film_Festival_-_2023_1_uuidx4.png" alt="Rob Hutt story collage image 18" loading="lazy"></figure>
-    <figure class="tile t19"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1744816744/OFFICIAL_SELECTION_-_Miami_International_Science_Fiction_Film_Festival_MiSciFi_-_2023_1_kzkw02.png" alt="Rob Hutt story collage image 19" loading="lazy"></figure>
-    <figure class="tile t20"><img src="https://res.cloudinary.com/drl0fxrkq/image/upload/v1744816723/OFFICIAL_SELECTION_-_SCI-FI-LONDON_Film_Festival_-_2023_1_lgn5xe.png" alt="Rob Hutt story collage image 20" loading="lazy"></figure>
-  </div>
 </section>
 <section class="ask reveal">
   <div class="tag">The parts that do not fit on a CV</div>
