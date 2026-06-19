@@ -1,11 +1,12 @@
 export const opportunities = {
   "camperking-workday-escape": {
     companyName: "CamperKing",
-    companyLogo: "CamperKing",
+    companyLogo: "https://www.vwcampersdirect.co.uk/images/home/logo-camper-king.png",
+    companyLogoAlt: "Camper King",
     password: "escape",
     campaignTitle: "Bring the dream to the people still stuck at their desks.",
     campaignSubtitle: "A lead-generation and brand storytelling activation that puts the campervan dream outside the office, on the one afternoon it lands hardest.",
-    heroImage: "linear-gradient(115deg, rgba(13,11,8,.45), rgba(13,11,8,.78)), radial-gradient(circle at 65% 34%, rgba(232,177,61,.34), transparent 28%), linear-gradient(135deg,#546575 0%,#c7a66d 45%,#263a2d 100%)",
+    heroImage: "linear-gradient(115deg, rgba(13,11,8,.34), rgba(13,11,8,.82)), url(\"https://res.cloudinary.com/drl0fxrkq/image/upload/v1781879712/791a09e28efa55098dcd091fc1234fb95a1b9ce7e8661cd540ed5403347a2a19_ynwfnj.jpg\") center/cover no-repeat",
     humanInsight: {
       headline: "Most people do not start by wanting a campervan. They start by wanting their weekends back.",
       body: [
