@@ -1,5 +1,5 @@
 import { build as esbuild } from "esbuild";
-import { rm, mkdir, cp } from "fs/promises";
+import { rm, mkdir, cp, readFile } from "fs/promises";
 
 // Build the static site for Render. Two steps:
 //   1. copy the finished static page + assets into dist/public
@@ -11,7 +11,18 @@ async function buildAll() {
   console.log("copying static site...");
   await cp("robhutt-com/index.html", "dist/public/index.html");
   await cp("robhutt-com/opportunity.html", "dist/public/opportunity.html");
+  await cp("robhutt-com/opportunities", "dist/public/opportunities", { recursive: true });
   await cp("robhutt-com/assets", "dist/public/assets", { recursive: true });
+
+  const opportunityData = await readFile("robhutt-com/assets/js/opportunities.js", "utf8");
+  const opportunitySlugs = [...opportunityData.matchAll(/^  "([^"]+)": \{/gm)].map((match) => match[1]);
+
+  await Promise.all(
+    opportunitySlugs.map(async (slug) => {
+      await mkdir(`dist/public/opportunities/${slug}`, { recursive: true });
+      await cp("robhutt-com/opportunity.html", `dist/public/opportunities/${slug}/index.html`);
+    }),
+  );
 
   console.log("bundling server...");
   await esbuild({
