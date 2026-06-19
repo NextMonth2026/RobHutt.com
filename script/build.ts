@@ -11,6 +11,7 @@ async function buildAll() {
   console.log("copying static site...");
   await cp("robhutt-com/index.html", "dist/public/index.html");
   await cp("robhutt-com/opportunity.html", "dist/public/opportunity.html");
+  await cp("robhutt-com/admin", "dist/public/admin", { recursive: true });
   await cp("robhutt-com/assets", "dist/public/assets", { recursive: true });
 
   const opportunityData = await readFile("robhutt-com/assets/js/opportunities.js", "utf8");
@@ -20,6 +21,8 @@ async function buildAll() {
     opportunitySlugs.map(async (slug) => {
       await mkdir(`dist/public/opportunities/${slug}`, { recursive: true });
       await cp("robhutt-com/opportunity.html", `dist/public/opportunities/${slug}/index.html`);
+      await mkdir(`dist/public/admin/pitches/${slug}`, { recursive: true });
+      await cp("robhutt-com/admin/pitches/detail-template.html", `dist/public/admin/pitches/${slug}/index.html`);
     }),
   );
 
