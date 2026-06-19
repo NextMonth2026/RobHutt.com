@@ -12,6 +12,10 @@ const publicDir = path.join(__dirname, "public");
 
 app.use(express.static(publicDir, { extensions: ["html"], maxAge: "1h" }));
 
+app.get("/opportunities/:slug", (_req, res) => {
+  res.sendFile(path.join(publicDir, "opportunity.html"));
+});
+
 // Single-page site: anything not matched as a static asset returns the page.
 app.use((_req, res) => {
   res.sendFile(path.join(publicDir, "index.html"));
