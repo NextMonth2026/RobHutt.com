@@ -87,6 +87,8 @@ heroImage: "linear-gradient(115deg, rgba(13,11,8,.35), rgba(13,11,8,.82)), radia
     ],
     campaignTitle: "Turn accountancy into the story of better business decisions.",
     campaignSubtitle: "A strategic content concept that shows how the right financial advice shapes the decisions that built local businesses.",
+    imagePrompt: 'Landscape cinematic editorial image, 16:9. A warm professional interview setup inside a stylish local business environment in Oxfordshire. A successful owner-managed business leader sits in conversation with an interviewer, with soft lighting, cameras, microphones and a small production setup visible. The mood is thoughtful, trustworthy and reflective rather than corporate. In the background, subtle details suggest a growing local business: team members working, framed awards, products or workshop details depending on the business type. The image should feel like a premium business storytelling series about difficult decisions, risk, confidence and growth. Realistic commercial documentary photography, cinematic depth of field, warm natural light, high detail, no real logos, no readable text, no distorted faces, no extra fingers.',
+    imagePromptStatus: "drafted",
     heroImage: "linear-gradient(115deg, rgba(13,11,8,.38), rgba(13,11,8,.82)), radial-gradient(circle at 32% 28%, rgba(232,177,61,.30), transparent 24%), linear-gradient(135deg,#1f2730 0%,#7b6a4c 50%,#b88a2a 100%)",
     humanInsight: { headline: "Business owners rarely remember the spreadsheet. They remember the decision it helped them make.", body: ["The opportunity is to make accountancy feel like momentum, judgement and confidence rather than compliance alone.", "By telling the stories behind pivotal business decisions, the campaign can make advisory value visible before a prospect asks for help."], shift: "The accountant becomes the guide behind the decision the owner is proud to have made." },
     characterXAnalysis: { headline: "Through the CharacterX lens, accountancy becomes a guide for decisive business owners.", protagonist: "The owner-manager facing decisions that feel too important to guess.", incitingIncident: "A growth, succession, investment or cashflow moment that demands clearer judgement.", guide: "The advisory firm, translating numbers into confidence and next steps.", transformation: "From isolated decision-maker to supported business builder." },
@@ -140,24 +142,6 @@ heroImage: "linear-gradient(115deg, rgba(13,11,8,.4), rgba(13,11,8,.82)), radial
     campaignAssets: ["Photography", "Reels", "TikToks", "Press coverage"],
     finalCTA: "If this made you think ‘worth a conversation’, that is exactly the idea."
   },
-  "accountancy-decisions-that-built-us": {
-    companyName: "Accountancy",
-    companyLogo: "Accountancy",
-    password: "decisions",
-    pitchAdmin: { status: "draft", contact: { name: "", role: "", company: "Accountancy", email: "", linkedinUrl: "", notes: "Prompt backfill record" }, createdAt: "2026-06-19", sentAt: "", followUpAt: "", lastContactedAt: "", notes: "The Decisions That Built Us image prompt ready for creative development.", tags: ["accountancy", "storytelling", "business"] },
-    campaignTitle: "The decisions that built us.",
-    campaignSubtitle: "A premium local business storytelling series about risk, confidence and growth.",
-    imagePrompt: 'Landscape cinematic editorial image, 16:9. A warm professional interview setup inside a stylish local business environment in Oxfordshire. A successful owner-managed business leader sits in conversation with an interviewer, with soft lighting, cameras, microphones and a small production setup visible. The mood is thoughtful, trustworthy and reflective rather than corporate. In the background, subtle details suggest a growing local business: team members working, framed awards, products or workshop details depending on the business type. The image should feel like a premium business storytelling series about difficult decisions, risk, confidence and growth. Realistic commercial documentary photography, cinematic depth of field, warm natural light, high detail, no real logos, no readable text, no distorted faces, no extra fingers.',
-    imagePromptStatus: "drafted",
-    heroImage: "linear-gradient(115deg, rgba(13,11,8,.35), rgba(13,11,8,.82)), radial-gradient(circle at 60% 28%, rgba(232,177,61,.32), transparent 24%), linear-gradient(135deg,#2b2118 0%,#9d6b3f 48%,#d8b16a 100%)",
-    humanInsight: { headline: "Business owners trust advisers who understand the decisions behind the numbers.", body: ["Growth stories are often told as outcomes, but the emotional truth sits in the decisions that got them there.", "This series makes accountancy feel like confidence, judgement and partnership."], shift: "The accountant becomes a guide through consequential decisions, not just a processor of accounts." },
-    characterXAnalysis: { headline: "Through the CharacterX lens, the accountancy firm can own the transformation from uncertainty to confident growth.", protagonist: "The owner-manager making difficult choices.", incitingIncident: "A moment where the next decision feels too important to guess.", guide: "The accountancy partner, bringing clarity and context.", transformation: "From isolated decision-maker to confident business leader." },
-    campaignConcept: { headline: "The Decisions That Built Us", body: "A premium interview-led content series profiling local business leaders and the turning-point decisions that shaped their growth.", callout: "I would turn financial expertise into human proof of confidence." },
-    commercialBenefits: ["Trust-building content", "Partner referrals", "Sales enablement", "Local business PR"],
-    deliveryPlan: [{ title: "Select stories", body: "Identify owner-managed clients with compelling decision points." }, { title: "Film interviews", body: "Capture thoughtful editorial conversations and supporting footage." }],
-    campaignAssets: ["Photography", "Video", "LinkedIn edits", "Landing pages"],
-    finalCTA: "If this made you think ‘worth a conversation’, that is exactly the idea."
-  }
 };
 
 const generatedPasswords = ["weekend", "freedom", "explore", "arrival", "guardian", "welcome"];
