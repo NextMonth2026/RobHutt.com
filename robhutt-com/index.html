@@ -3,21 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rob Hutt | I bring your future forward</title>
+<title>Rob Hutt</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
-<!-- Head essentials added during port: favicon, social cards, description. No visible copy changed. -->
 <!-- TODO: Rob - add favicon file at assets/img/favicon.png, then uncomment the line below -->
 <!-- <link rel="icon" type="image/png" href="assets/img/favicon.png"> -->
-<meta name="description" content="Rob Hutt | I bring your future forward.">
+<meta name="description" content="Rob Hutt. I help organisations find and tell the story that moves people.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Rob Hutt | I bring your future forward">
-<meta property="og:description" content="Rob Hutt | I bring your future forward.">
+<meta property="og:title" content="Rob Hutt">
+<meta property="og:description" content="I help organisations find and tell the story that moves people.">
 <meta property="og:image" content="assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rob Hutt | I bring your future forward">
-<meta name="twitter:description" content="Rob Hutt | I bring your future forward.">
+<meta name="twitter:title" content="Rob Hutt">
+<meta name="twitter:description" content="I help organisations find and tell the story that moves people.">
 <meta name="twitter:image" content="assets/img/og.png">
 <style>
   :root{
@@ -46,8 +45,6 @@
     opacity:.04;mix-blend-mode:multiply;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-
-  /* ---------- NAV ---------- */
   nav{
     position:fixed;top:0;left:0;right:0;z-index:100;
     display:flex;justify-content:space-between;align-items:center;
@@ -55,18 +52,16 @@
     mix-blend-mode:difference;color:#fff;
   }
   nav .mark{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase}
-  nav .book{
+  nav .say{
     font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
     color:#fff;text-decoration:none;border:1px solid #fff;padding:9px 16px;border-radius:2px;
     transition:opacity .3s;
   }
-  nav .book:hover{opacity:.6}
-
-  /* ---------- HERO ---------- */
+  nav .say:hover{opacity:.6}
   .hero{
     min-height:100vh;position:relative;
     display:flex;flex-direction:column;justify-content:flex-end;
-    padding:0 6vw 7vh;
+    padding:0 6vw 9vh;
     background:
       radial-gradient(120% 80% at 80% 0%, rgba(200,150,42,.18), transparent 60%),
       linear-gradient(180deg,#15110b 0%, #1c160d 55%, #221a0f 100%);
@@ -86,454 +81,147 @@
     opacity:0;transform:translateY(14px);animation:rise .9s .15s cubic-bezier(.2,.7,.2,1) forwards;
   }
   .hero h1{
-    position:relative;
-    font-weight:300;
-    font-size:clamp(3.2rem,11.5vw,11rem);
-    line-height:.9;letter-spacing:-.03em;
-    max-width:14ch;
+    position:relative;font-weight:300;
+    font-size:clamp(2.7rem,8vw,7.4rem);
+    line-height:.96;letter-spacing:-.03em;max-width:20ch;
   }
   .hero h1 span{display:block;overflow:hidden}
   .hero h1 span i{
-    display:block;font-style:normal;
-    transform:translateY(110%);
+    display:block;font-style:normal;transform:translateY(110%);
     animation:rise 1.1s cubic-bezier(.16,.84,.27,1) forwards;
   }
   .hero h1 .l1 i{animation-delay:.25s}
   .hero h1 .l2 i{animation-delay:.4s}
-  .hero h1 .l3 i{animation-delay:.55s;font-weight:900;font-style:italic;color:var(--gold-bright)}
+  .hero h1 .l3 i{animation-delay:.55s}
+  .hero h1 em{font-style:italic;font-weight:900;color:var(--gold-bright)}
   .hero .sub{
-    position:relative;margin-top:36px;max-width:46ch;
-    font-size:clamp(1.05rem,2.1vw,1.4rem);line-height:1.55;color:rgba(244,239,230,.74);
-    font-weight:300;
+    position:relative;margin-top:38px;max-width:48ch;
+    font-size:clamp(1.05rem,2.1vw,1.4rem);line-height:1.55;color:rgba(244,239,230,.74);font-weight:300;
     opacity:0;transform:translateY(14px);animation:rise 1s .85s cubic-bezier(.2,.7,.2,1) forwards;
   }
   .hero .sub b{color:var(--paper);font-weight:600}
   @keyframes rise{to{opacity:1;transform:translateY(0)}}
-
   .scrollcue{
-    position:absolute;right:6vw;bottom:7vh;
+    position:absolute;right:6vw;bottom:9vh;
     font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
     color:rgba(244,239,230,.5);writing-mode:vertical-rl;
     opacity:0;animation:rise 1s 1.3s forwards;
   }
-
-  /* ---------- SECTION FRAME ---------- */
   .tag{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:30px}
-
-  /* ---------- SPINE / THESIS ---------- */
-  .intro{padding:14vh 6vw 9vh;max-width:1100px}
-  .intro p{
-    font-size:clamp(1.5rem,3.6vw,2.6rem);line-height:1.32;font-weight:300;letter-spacing:-.015em;max-width:22ch;
-  }
-  .intro p em{font-style:italic;color:var(--gold);font-weight:600}
-  .intro .thread{
-    margin-top:48px;max-width:60ch;font-size:1.12rem;line-height:1.62;color:rgba(13,11,8,.74);
-  }
-
-  /* ---------- PILLARS ---------- */
-  .pillars{padding:0 6vw 4vh}
-  .pillar{
-    display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;
-    padding:9vh 0;border-top:1px solid var(--line);
-  }
-  .pillar:nth-child(even) .vid{order:2}
-  .pillar .num{
-    font-family:var(--mono);font-size:13px;letter-spacing:.2em;color:var(--gold);margin-bottom:22px;
-  }
-  .pillar h2{
-    font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.02;font-weight:300;letter-spacing:-.025em;margin-bottom:24px;
-  }
-  .pillar h2 em{font-style:italic;font-weight:600}
-  .pillar p{font-size:1.08rem;line-height:1.6;max-width:42ch;color:rgba(13,11,8,.72);font-weight:400}
-  .pillar p .edit{color:var(--rust);font-family:var(--mono);font-size:.78rem;letter-spacing:.02em}
-
-  /* vertical video slot */
-  .vid{
-    position:relative;aspect-ratio:9/16;max-height:72vh;width:100%;
-    background:linear-gradient(155deg,#1c160d,#2a2113);
-    border-radius:4px;overflow:hidden;cursor:pointer;
-    box-shadow:0 30px 60px -20px rgba(13,11,8,.5);
-    transition:transform .5s cubic-bezier(.2,.7,.2,1);
-  }
-  .vid:hover{transform:translateY(-6px)}
-  .vid video{width:100%;height:100%;object-fit:cover;display:block}
-  .vid .placeholder{
-    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;
-    padding:24px;color:rgba(244,239,230,.55);
-  }
-  .vid .placeholder .ph-top{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
-  .vid .placeholder .ph-play{
-    align-self:center;margin:auto 0;
-    width:64px;height:64px;border:1px solid rgba(244,239,230,.4);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .vid .placeholder .ph-play::after{
-    content:"";border-left:14px solid rgba(244,239,230,.7);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px;
-  }
-  .vid .placeholder .ph-cap{font-family:var(--mono);font-size:11px;letter-spacing:.05em;line-height:1.5;color:rgba(232,177,61,.7)}
-
   .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-
-  /* ---------- BIOGRAPHY ---------- */
-  .bio{padding:12vh 6vw;max-width:1000px}
-  .bio h3{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:300;letter-spacing:-.025em;margin-bottom:44px;line-height:1.08}
-  .bio h3 em{font-style:italic;font-weight:600;color:var(--gold)}
-  .bio .body p{font-size:1.18rem;line-height:1.68;margin-bottom:26px;color:rgba(13,11,8,.82);max-width:64ch}
-  .bio .body p.tight{color:rgba(13,11,8,.6);font-size:1.05rem}
-  .bio .body p em{font-style:italic}
-  .bio .body strong{font-weight:600}
-
-  /* ---------- METHOD ---------- */
-  .method{
-    margin:6vh 6vw;padding:12vh 7vw;border-radius:6px;
-    background:linear-gradient(165deg,#ece4d6,#e3d8c5);
-    border:1px solid var(--line);
+  .intro{padding:16vh 6vw 10vh;max-width:1100px}
+  .intro p{font-size:clamp(1.5rem,3.6vw,2.6rem);line-height:1.32;font-weight:300;letter-spacing:-.015em;max-width:24ch}
+  .intro p em{font-style:italic;color:var(--gold);font-weight:600}
+  .intro .thread{margin-top:48px;max-width:62ch;font-size:1.14rem;line-height:1.64;color:rgba(13,11,8,.76)}
+  .intro .thread em{font-style:italic;color:var(--ink);font-weight:600}
+  .ask{padding:6vh 6vw 12vh;max-width:1100px}
+  .ask h3{font-size:clamp(1.9rem,4.6vw,3.1rem);font-weight:300;letter-spacing:-.025em;line-height:1.08;margin-bottom:18px}
+  .ask h3 em{font-style:italic;font-weight:600;color:var(--gold)}
+  .ask .lead{font-size:1.14rem;line-height:1.6;max-width:54ch;color:rgba(13,11,8,.7);margin-bottom:58px}
+  .ask ul{list-style:none}
+  .ask li{
+    border-top:1px solid var(--line);padding:30px 0;
+    display:flex;gap:28px;align-items:baseline;
+    transition:padding-left .4s cubic-bezier(.2,.7,.2,1);
   }
-  .method h3{font-size:clamp(2rem,5vw,3.4rem);font-weight:300;letter-spacing:-.03em;line-height:1.04;margin-bottom:14px}
-  .method h3 em{font-style:italic;font-weight:600;color:var(--rust)}
-  .method .lead{font-size:1.15rem;line-height:1.62;max-width:54ch;color:rgba(13,11,8,.72);margin-bottom:64px}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:3vw}
-  .step .s-num{font-family:var(--mono);font-size:13px;letter-spacing:.2em;color:var(--gold);margin-bottom:18px}
-  .step h4{font-size:1.5rem;font-weight:600;letter-spacing:-.01em;margin-bottom:14px;line-height:1.1}
-  .step p{font-size:1.02rem;line-height:1.58;color:rgba(13,11,8,.72)}
-  .method .collision{
-    margin-top:64px;padding-top:44px;border-top:1px solid var(--line);
-    font-size:clamp(1.3rem,2.8vw,1.9rem);line-height:1.4;font-weight:300;letter-spacing:-.015em;max-width:34ch;
-  }
-  .method .collision em{font-style:italic;color:var(--rust);font-weight:600}
-
-  /* ---------- OFFER LADDER ---------- */
-  .offer{padding:13vh 6vw}
-  .offer .head{max-width:1100px;margin-bottom:6vh}
-  .offer .head h3{font-size:clamp(2rem,5vw,3.4rem);font-weight:300;letter-spacing:-.03em;line-height:1.05;margin-top:6px}
-  .offer .head h3 em{font-style:italic;font-weight:600;color:var(--gold)}
-  .offer .head p{margin-top:24px;max-width:52ch;font-size:1.12rem;line-height:1.6;color:rgba(13,11,8,.72)}
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
-  .card{
-    position:relative;border:1px solid var(--line);border-radius:6px;padding:48px 44px;
-    display:flex;flex-direction:column;background:linear-gradient(165deg,rgba(255,255,255,.35),transparent);
-    transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s;
-  }
-  .card:hover{transform:translateY(-5px);box-shadow:0 30px 60px -28px rgba(13,11,8,.4)}
-  .card.dark{
-    background:linear-gradient(160deg,#15110b,#221a0f);color:var(--paper);border-color:transparent;
-  }
-  .card .stage{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust)}
-  .card.dark .stage{color:var(--gold-bright)}
-  .card h4{font-size:clamp(1.7rem,3.2vw,2.3rem);font-weight:400;letter-spacing:-.02em;margin:18px 0 8px;line-height:1.05}
-  .card h4 em{font-style:italic}
-  .card .role{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--gold);margin-bottom:26px}
-  .card.dark .role{color:var(--gold-bright)}
-  .card .desc{font-size:1.06rem;line-height:1.62;color:rgba(13,11,8,.74);margin-bottom:30px}
-  .card.dark .desc{color:rgba(244,239,230,.74)}
-  .card .leave{
-    margin-top:auto;padding-top:24px;border-top:1px solid var(--line);
-    font-size:1.02rem;line-height:1.5;
-  }
-  .card.dark .leave{border-top-color:rgba(244,239,230,.18)}
-  .card .leave .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(13,11,8,.5);display:block;margin-bottom:10px}
-  .card.dark .leave .lbl{color:rgba(244,239,230,.5)}
-  .card .leave .what{font-weight:600;font-size:1.15rem}
-  .card.dark .leave .what{color:var(--gold-bright)}
-  .ladder-note{
-    max-width:1100px;margin:5vh auto 0;text-align:center;
-    font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:rgba(13,11,8,.55);
-  }
-  @media(max-width:760px){
-    .cards{grid-template-columns:1fr;gap:24px}
-    .card{padding:40px 32px}
-  }
-
-  /* ---------- CONVERGENCE ---------- */
-  .converge{
-    padding:18vh 6vw;max-width:1080px;margin:0 auto;
-  }
-  .converge .tag{color:var(--gold)}
-  .converge p{
-    font-size:clamp(1.5rem,3.4vw,2.5rem);line-height:1.34;font-weight:300;letter-spacing:-.02em;
-    max-width:24ch;margin-bottom:38px;
-  }
-  .converge p:last-child{margin-bottom:0}
-  .converge .lead-in{color:rgba(13,11,8,.55);font-size:clamp(1.2rem,2.6vw,1.7rem);max-width:30ch}
-  .converge em{font-style:italic;color:var(--gold);font-weight:600}
-  .converge strong{font-weight:600}
-  .converge .small-body{
-    font-size:1.18rem;line-height:1.66;font-weight:400;max-width:60ch;color:rgba(13,11,8,.8);
-    letter-spacing:0;
-  }
-
-  /* ---------- VERDICT ---------- */
-  .verdict{
-    margin:6vh 6vw;padding:16vh 8vw;border-radius:6px;
+  .ask li:last-child{border-bottom:1px solid var(--line)}
+  .ask li:hover{padding-left:14px}
+  .ask li .n{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--gold);flex:0 0 auto;padding-top:8px;min-width:34px}
+  .ask li .q{font-size:clamp(1.3rem,2.7vw,1.85rem);line-height:1.32;font-weight:300;letter-spacing:-.01em}
+  .ask li .q em{font-style:italic;font-weight:600;color:var(--rust)}
+  .ask .foot{margin-top:54px;font-size:1.12rem;line-height:1.6;max-width:48ch;color:rgba(13,11,8,.72)}
+  .ask .foot em{font-style:italic;color:var(--ink);font-weight:600}
+  .connect{
+    margin:6vh 6vw;padding:15vh 8vw;border-radius:6px;
     background:
       radial-gradient(100% 120% at 0% 0%, rgba(200,150,42,.22), transparent 55%),
       linear-gradient(160deg,#15110b,#221a0f);
     color:var(--paper);text-align:center;position:relative;overflow:hidden;
   }
-  .verdict .k{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:34px}
-  .verdict h2{
-    font-size:clamp(2.4rem,6.5vw,5rem);line-height:1.04;font-weight:300;letter-spacing:-.03em;max-width:16ch;margin:0 auto;
-  }
-  .verdict h2 em{font-style:italic;font-weight:900;color:var(--gold-bright)}
-
-  /* ---------- CTA ---------- */
-  .cta{padding:16vh 6vw;text-align:center}
-  .cta .small{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:28px}
-  .cta h3{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:300;letter-spacing:-.02em;line-height:1.15;max-width:20ch;margin:0 auto 20px}
-  .cta h3 em{font-style:italic;font-weight:600;color:var(--gold)}
-  .cta .note{font-size:1.05rem;color:rgba(13,11,8,.62);max-width:40ch;margin:0 auto 48px;line-height:1.55}
-  .cta a.primary{
-    display:inline-block;font-family:var(--mono);font-size:14px;letter-spacing:.16em;text-transform:uppercase;
-    background:var(--ink);color:var(--paper);text-decoration:none;
-    padding:22px 46px;border-radius:3px;transition:transform .35s,background .35s;
-  }
-  .cta a.primary:hover{transform:translateY(-3px);background:var(--rust)}
-  .cta .alt{margin-top:26px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:rgba(13,11,8,.5)}
-  .cta .alt a{color:var(--ink)}
-
+  .connect .k{font-family:var(--mono);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:30px}
+  .connect h2{font-size:clamp(2.1rem,5.5vw,4rem);line-height:1.06;font-weight:300;letter-spacing:-.03em;max-width:18ch;margin:0 auto 16px}
+  .connect h2 em{font-style:italic;font-weight:900;color:var(--gold-bright)}
+  .connect .note{font-size:1.05rem;color:rgba(244,239,230,.7);max-width:42ch;margin:0 auto 52px;line-height:1.55;font-weight:300}
+  .connect .links{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+  .connect a.btn{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:18px 34px;border-radius:3px;transition:transform .35s,background .35s,color .35s}
+  .connect a.primary{background:var(--paper);color:var(--ink)}
+  .connect a.primary:hover{transform:translateY(-3px);background:var(--gold-bright)}
+  .connect a.ghost{border:1px solid rgba(244,239,230,.4);color:var(--paper)}
+  .connect a.ghost:hover{transform:translateY(-3px);border-color:var(--gold-bright);color:var(--gold-bright)}
   footer{
     padding:40px 6vw;border-top:1px solid var(--line);
     display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
     font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:rgba(13,11,8,.55);text-transform:uppercase;
   }
-
   @media(max-width:760px){
-    .pillar{grid-template-columns:1fr;gap:36px;padding:7vh 0}
-    .pillar:nth-child(even) .vid{order:0}
-    .vid{max-height:80vh;max-width:380px;margin:0 auto}
-    .hero{padding-bottom:10vh}
+    .hero{padding-bottom:12vh}
     .scrollcue{display:none}
     nav{padding:18px 6vw}
-    nav .book{display:none}
-    .steps{grid-template-columns:1fr;gap:44px}
+    nav .say{display:none}
+    .ask li{gap:18px}
+    .ask li .n{min-width:28px}
   }
 </style>
 </head>
 <body>
-
 <nav>
   <div class="mark">Rob Hutt</div>
-  <a class="book" href="#book">Book a conversation</a>
+  <a class="say" href="#connect">Say hello</a>
 </nav>
-
-<!-- HERO -->
 <header class="hero">
   <div class="ambient"></div>
-  <div class="eyebrow">A film director's eye. A builder's mind. One head.</div>
+  <div class="eyebrow">Rob Hutt</div>
   <h1>
-    <span class="l1"><i>I bring</i></span>
-    <span class="l2"><i>your future</i></span>
-    <span class="l3"><i>forward.</i></span>
+    <span class="l1"><i>I help organisations</i></span>
+    <span class="l2"><i>find and tell the</i></span>
+    <span class="l3"><i><em>story</em> that moves people.</i></span>
   </h1>
-  <p class="sub">Twenty years of watching businesses rise and fall taught me which futures are real and which are vanity. The tools have changed beyond recognition since I started. I use the sharpest of them to make a future <b>visible before it exists</b>, then help you build it.</p>
-  <div class="scrollcue">Scroll for the proof</div>
+  <p class="sub">Award-winning film director, brand strategist and author of the CharacterX methodology. Twenty years across government, film and enterprise, spent learning how people make sense of change, decide who to trust, and act.</p>
+  <div class="scrollcue">A little more below</div>
 </header>
-
-<!-- SPINE / THESIS -->
 <section class="intro reveal">
-  <div class="tag">The thread</div>
-  <p>I take the thing your business is years away from, and make it <em>real enough to see and feel</em>, now.</p>
-  <p class="thread">I'm not a business guru, and I won't pretend to know your industry better than you do. What I do is read a business the way a director reads a scene, for the story it's telling and the one it should be. I sit with the person who knows it best, the founder, or the expert at the centre of it, and run a controlled collision between their conviction and everything I've seen work in other sectors and at the frontier of technology. It's a specific kind of consultancy. It only works founder to founder. So that's who I talk to.</p>
+  <div class="tag">The short version</div>
+  <p>Every business is telling a story. Most of them are telling it <em>badly</em>.</p>
+  <p class="thread">I started in communications and innovation at the Met Office, then spent a decade building businesses, directing films and developing intellectual property of my own. That work converged into <em>CharacterX</em>, a methodology rooted in cinematic storytelling that treats the customer as the protagonist and the brand as the guide, and into NextMonth, the platform I am building to put that method to work. The CV has the facts. This page is for the parts that do not fit on one.</p>
 </section>
-
-<!-- PILLARS -->
-<section class="pillars">
-
-  <!-- 1 -->
-  <article class="pillar reveal">
-    <div class="vid" onclick="playSlot(this)">
-      <video muted loop playsinline preload="none" poster=""><!-- <source src="assets/video/reel-01.mp4" type="video/mp4"> --></video>
-      <div class="placeholder">
-        <div class="ph-top">Reel 01 · 0:24</div>
-        <div class="ph-play"></div>
-        <div class="ph-cap">▸ DROP IN: showreel cut. The films, the moments that moved a room.</div>
-      </div>
-    </div>
-    <div class="copy">
-      <div class="num">01 / Emotional proof</div>
-      <h2>Films that <em>moved people</em>, and won.</h2>
-      <p>Written, directed, awarded internationally. I make audiences feel something that didn't exist until it was on screen. That instinct is the engine behind everything else here. <span class="edit">[Name your headline awards + Time Spent.]</span></p>
-    </div>
-  </article>
-
-  <!-- 2 -->
-  <article class="pillar reveal">
-    <div class="vid" onclick="playSlot(this)">
-      <video muted loop playsinline preload="none" poster=""><!-- <source src="assets/video/reel-02.mp4" type="video/mp4"> --></video>
-      <div class="placeholder">
-        <div class="ph-top">Reel 02 · 0:24</div>
-        <div class="ph-play"></div>
-        <div class="ph-cap">▸ DROP IN: the commercial work. Heathrow, institutional, product.</div>
-      </div>
-    </div>
-    <div class="copy">
-      <div class="num">02 / Commercial proof</div>
-      <h2>Vision that <em>converts</em> to signed contracts.</h2>
-      <p>I won the Chairman's Award for Business Excellence after putting the first mobile temporary runway sensors onto Heathrow, then closing a single contract across the entire British Airports Authority group. I don't only see the future. I sell it and deliver it.</p>
-    </div>
-  </article>
-
-  <!-- 3 -->
-  <article class="pillar reveal">
-    <div class="vid" onclick="playSlot(this)">
-      <video muted loop playsinline preload="none" poster=""><!-- <source src="assets/video/reel-03.mp4" type="video/mp4"> --></video>
-      <div class="placeholder">
-        <div class="ph-top">Reel 03 · 0:24</div>
-        <div class="ph-play"></div>
-        <div class="ph-cap">▸ DROP IN: screen-capture of the build in motion. You narrating what it does.</div>
-      </div>
-    </div>
-    <div class="copy">
-      <div class="num">03 / Frontier proof</div>
-      <h2>Building what most people are still <em>talking about</em>.</h2>
-      <p>For the past 18 months I've been building working systems at the frontier: a reality engine, a continuity engine, interactive video, and an AI operator running across an operating system. Not slideware. Things that run. Most people are still describing what's coming. I'm building it.</p>
-    </div>
-  </article>
-
-  <!-- 4 -->
-  <article class="pillar reveal">
-    <div class="vid" onclick="playSlot(this)">
-      <video muted loop playsinline preload="none" poster=""><!-- <source src="assets/video/reel-04.mp4" type="video/mp4"> --></video>
-      <div class="placeholder">
-        <div class="ph-top">Reel 04 · 0:24</div>
-        <div class="ph-play"></div>
-        <div class="ph-cap">▸ DROP IN: the book / you talking through the idea behind it.</div>
-      </div>
-    </div>
-    <div class="copy">
-      <div class="num">04 / The lens</div>
-      <h2>The pattern under <em>everything</em>.</h2>
-      <p>I wrote a book to understand the thing all my work has in common: that people run on story, and businesses are no different. The customer is the protagonist, the brand is the guide, and what everyone is really chasing is transformation. It isn't a technique I picked up. It's the lens I see through. <span class="edit">[Link the book.]</span></p>
-    </div>
-  </article>
-
+<section class="ask reveal">
+  <div class="tag">The parts that do not fit on a CV</div>
+  <h3>There is a story behind each of these. <em>Ask me.</em></h3>
+  <p class="lead">A CV is the formal version. These are the ones I would rather tell in person, and every one of them is true.</p>
+  <ul>
+    <li><span class="n">01</span><span class="q">Ask me how a story closed a contract across the <em>entire British Airports Authority group</em>.</span></li>
+    <li><span class="n">02</span><span class="q">Ask me about the single post of mine that reached <em>16.5 million</em> people.</span></li>
+    <li><span class="n">03</span><span class="q">Ask me what I told the other contestants in the final stage of <em>The Apprentice</em>, and why it cost me.</span></li>
+    <li><span class="n">04</span><span class="q">Ask me about the story I planted in the media for fun, that ran in <em>The Sun</em>, hit Fox News, and got me onto Howard Stern.</span></li>
+    <li><span class="n">05</span><span class="q">Ask me how a Halloween campaign outperformed a <em>decade</em> of lead generation.</span></li>
+    <li><span class="n">06</span><span class="q">Ask me why <em>NASA and Yale</em> came looking at climate work coming out of the Met Office.</span></li>
+    <li><span class="n">07</span><span class="q">Ask me about being flown to New York to pitch the Vice President of <em>Hasbro</em>.</span></li>
+    <li><span class="n">08</span><span class="q">Ask me why I direct films and build AI platforms with the <em>same part of my brain</em>.</span></li>
+  </ul>
+  <p class="foot">Pick one. I will tell you the whole thing straight, and you will understand more about how I work than any list of jobs could show you. <em>That is rather the point.</em></p>
 </section>
-
-<!-- BIOGRAPHY -->
-<section class="bio reveal">
-  <div class="tag">Who you'd be talking to</div>
-  <h3>It looks scattered until you find the <em>thread</em>.</h3>
-  <div class="body">
-    <p>Between 2007 and 2014 I worked at the Met Office, where I won a public-sector innovation grant, created a 3D children's animation series with a studio that had worked on <em>Ice Age</em>, and founded an organisation-wide innovation academy. I worked directly with John Hirst CBE during his time as Chief Executive, ran cross-governmental communications campaigns spanning the Met Office, DEFRA, the Department of Energy and Climate Change and the Department for Business, Innovation and Skills, and stood in front of MPs in Whitehall to talk about innovation in the public sector. The climate work I led there drew approaches from NASA and Yale.</p>
-
-    <p>Before and since, I've made films and built things. I've directed the actor Anton Lesser and photographed Alastair Caldwell, the McLaren team manager whose story reached the screen in <em>Rush</em>. I've launched original products of my own, backed by EU and investment funding, and been flown to New York to pitch the Vice President of Hasbro at the Toy Fair.</p>
-
-    <p>I understand how attention moves. I once planted a story in the media for the fun of it. It ran in <em>The Sun</em> and on Fox News, and got me an invitation onto the Howard Stern Show. A single post of mine has reached 16.5 million people. <strong>I'll tell you that story in person.</strong></p>
-
-    <p>And when I reached the final stage of <em>The Apprentice</em>, on camera at Fremantle, they asked what warning I'd give the other contestants. I said: be kind to the people you meet on the way up, because you'll meet them again on the way down. It wasn't the answer they wanted. I knew before I left the building. I've never regretted it.</p>
-
-    <p class="tight">My work and films have also taken me from BBC studios to River Cottage to a sizzle reel in Times Square, and into conversations with Netflix about my film <em>Time Spent</em>. Flashbuzz, my production company, is on the BBC Pitch List.</p>
+<section class="connect reveal" id="connect">
+  <div class="k">Say hello</div>
+  <h2>The best way to know me is to <em>ask</em>.</h2>
+  <p class="note">Whether you are hiring, building something, or just curious about one of those stories, I would be glad to hear from you.</p>
+  <div class="links">
+    <!-- TODO: Rob - replace REPLACE_WITH_YOUR_EMAIL with your email address -->
+    <a class="btn primary" href="mailto:REPLACE_WITH_YOUR_EMAIL">Email me</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/robdanielhutt" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- TODO: Rob - to link the CV, replace REPLACE_WITH_CV_LINK and uncomment -->
+    <!-- <a class="btn ghost" href="REPLACE_WITH_CV_LINK" target="_blank" rel="noopener">My CV</a> -->
   </div>
 </section>
-
-<!-- METHOD -->
-<section class="method reveal">
-  <div class="tag">How it works</div>
-  <h3>First we <em>talk</em>. Then we <em>play</em>.</h3>
-  <p class="lead">It only works with the person who knows the business best, the founder, or the expert at its centre. Conviction in the room is the one thing I need. I bring everything else.</p>
-  <div class="steps">
-    <div class="step">
-      <div class="s-num">Day one</div>
-      <h4>A day with your expert</h4>
-      <p>We talk, and we genuinely don't know where it will go. I share what's working in other sectors and at the edge of technology. For the first half, they defend why things are done the way they are. And they should.</p>
-    </div>
-    <div class="step">
-      <div class="s-num">The shift</div>
-      <h4>The interesting middle</h4>
-      <p>By the end of the day we've found it. They've moved from where they started. I've moved from "anything is possible" toward something confined, structured and real. Neither of us reaches that point alone.</p>
-    </div>
-    <div class="step">
-      <div class="s-num">The decision</div>
-      <h4>Present back to the board</h4>
-      <p>I present what we found to your board of directors. Then, together, you decide how to proceed. No assumptions, no lock-in, just a clear view of a future worth building.</p>
-    </div>
-  </div>
-  <p class="collision">A controlled collision between the person who knows the business cold and someone who can see <em>past its edges</em>.</p>
-</section>
-
-<!-- OFFER LADDER -->
-<section class="offer reveal">
-  <div class="head">
-    <div class="tag">Two ways to work together</div>
-    <h3>One finds what's worth building. The other <em>builds it</em>.</h3>
-    <p>Start with a day. If there's something real there, we take a small team out and make it. The first de-risks the second. You're never committing to more than the next step.</p>
-  </div>
-
-  <div class="cards">
-
-    <div class="card">
-      <div class="stage">Step one · The diagnostic</div>
-      <h4>The Discovery Day</h4>
-      <div class="role">First, we talk</div>
-      <p class="desc">A day with you and the expert at the centre of the business, sometimes the same person, sometimes not. We walk the business. We talk infrastructure, competitors, customers, the industry and where it's heading. I bring an outside eye and twenty years of watching businesses rise and fall. By the end of the day we know whether there's something worth building.</p>
-      <div class="leave">
-        <span class="lbl">You leave with</span>
-        <span class="what">A clear view of the opportunity, and a decision on whether to build it.</span>
-      </div>
-    </div>
-
-    <div class="card dark">
-      <div class="stage">Step two · The build</div>
-      <h4>The Three-Day Getaway</h4>
-      <div class="role">Then, we play</div>
-      <p class="desc">We take a select group out of the business and away from the noise. We share knowledge, look outward at other industries and what your competitors aren't doing, and we build. Not a workshop that ends in sticky notes, but real making. By the end, the thing you came to explore exists.</p>
-      <div class="leave">
-        <span class="lbl">You leave with</span>
-        <span class="what">A built prototype of your next move: a film, a mockup, a working concept. Something the board can see, not just imagine.</span>
-      </div>
-    </div>
-
-  </div>
-
-  <p class="ladder-note">Both work founder to founder. I work directly with the people who can say yes.</p>
-</section>
-
-<!-- CONVERGENCE -->
-<section class="converge reveal">
-  <div class="tag">Why me, underneath all of it</div>
-  <p class="lead-in">Strip it all back, and here is what you're actually hiring.</p>
-  <p>A <em>film director</em>. Someone whose whole craft is character, detail, story and scene, who reads what's really happening in a room and shapes it into something people feel.</p>
-  <p>And someone who has spent his whole life obsessed with <em>patterns</em>, with connecting things that don't obviously belong together and building something new out of them.</p>
-  <p class="small-body">Most people are one or the other. The director who sees and feels, or the builder who connects and makes. I've spent twenty years being both at once, and I wrote a book to understand what happens where they meet: that people run on story, that businesses are no different, and that what we're all really chasing is transformation. That convergence, the director's eye and the builder's mind in one head, is the most important thing I bring. It's why I can look at your business and see the future it's trying to become.</p>
-</section>
-
-<!-- VERDICT -->
-<section class="verdict reveal">
-  <div class="k">What it all adds up to</div>
-  <h2>I make the invisible <em>visible</em>, and businesses believe it before it exists.</h2>
-</section>
-
-<!-- CTA -->
-<section class="cta" id="book">
-  <div class="small">The only thing this page is for</div>
-  <h3>Let's start with a day on <em>your</em> future, and find out what's worth building.</h3>
-  <p class="note">I work directly with founders and the experts at the centre of a business. If that's you, let's talk.</p>
-  <!-- TODO: Rob - paste booking link (replace REPLACE_WITH_YOUR_CALENDAR_LINK below) -->
-  <a class="primary" href="REPLACE_WITH_YOUR_CALENDAR_LINK" target="_blank" rel="noopener">Book a conversation</a>
-  <!-- TODO: Rob - paste email address (replace REPLACE_WITH_YOUR_EMAIL and the visible link text below) -->
-  <div class="alt">or email <a href="mailto:REPLACE_WITH_YOUR_EMAIL">your@email.com</a></div>
-</section>
-
 <footer>
   <div>Rob Hutt, Banbury, UK</div>
-  <div>I bring your future forward</div>
+  <div>I help organisations find and tell the story that moves people</div>
 </footer>
-
 <script>
   const io=new IntersectionObserver((es)=>{
     es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
   },{threshold:.15});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-  function playSlot(slot){
-    const v=slot.querySelector('video');
-    if(v && v.querySelector('source')){
-      const ph=slot.querySelector('.placeholder');
-      if(ph) ph.style.display='none';
-      v.muted=false; v.play();
-    }
-  }
 </script>
 </body>
 </html>
