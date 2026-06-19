@@ -6,7 +6,7 @@ export const opportunities = {
     companyLogo: "https://www.vwcampersdirect.co.uk/images/home/logo-camper-king.png",
     companyLogoAlt: "Camper King",
     password: "escape",
-    pitchAdmin: { status: "ready", contact: { name: "", role: "", company: "CamperKing", email: "", linkedinUrl: "", notes: "Target: partnerships / marketing lead" }, createdAt: "2026-06-19", sentAt: "", followUpAt: "", lastContactedAt: "", notes: "Workday Escape concept ready for outreach.", tags: ["leisure", "automotive", "activation"] },
+    pitchAdmin: { status: "ready", contactName: "", contactRole: "", contactEmail: "", contactPhone: "", contactLinkedIn: "", lastContactDate: "2026-06-19", lastContactMethod: "email", nextFollowUpDate: "", relationshipNotes: "Target: partnerships / marketing lead", activityLog: [{ date: "2026-06-19", type: "email", summary: "Sent opportunity memo" }], contact: { name: "", role: "", company: "CamperKing", email: "", linkedinUrl: "", notes: "Target: partnerships / marketing lead" }, createdAt: "2026-06-19", sentAt: "", followUpAt: "", lastContactedAt: "", notes: "Workday Escape concept ready for outreach.", tags: ["leisure", "automotive", "activation"] },
     alternativeTargets: [
       { companyName: "Motorhome Depot Oxfordshire", priority: 1, fitStrength: "strong", whyTheyFit: "Similar audience seeking campervan or motorhome lifestyle.", status: "not_contacted" },
       { companyName: "Venture Caravans", priority: 2, fitStrength: "good", whyTheyFit: "Relevant leisure vehicle audience, though positioning may need adapting.", status: "not_contacted" },
@@ -51,7 +51,7 @@ export const opportunities = {
     campaignFamilyId: "guarded-for-the-day",
     companyLogo: "Safeguard",
     password: "guarded",
-    pitchAdmin: { status: "draft", contact: { name: "", role: "", company: "Safeguard", email: "", linkedinUrl: "", notes: "Confirm best buyer before sending" }, createdAt: "2026-06-19", sentAt: "", followUpAt: "", lastContactedAt: "", notes: "Exploratory protection story concept.", tags: ["protection", "trust"] },
+    pitchAdmin: { status: "draft", contactName: "", contactRole: "", contactEmail: "", contactPhone: "", contactLinkedIn: "", lastContactDate: "", lastContactMethod: "", nextFollowUpDate: "", relationshipNotes: "Confirm best buyer before sending", activityLog: [], contact: { name: "", role: "", company: "Safeguard", email: "", linkedinUrl: "", notes: "Confirm best buyer before sending" }, createdAt: "2026-06-19", sentAt: "", followUpAt: "", lastContactedAt: "", notes: "Exploratory protection story concept.", tags: ["protection", "trust"] },
     alternativeTargets: [
       { companyName: "BMA Varsity", priority: 1, fitStrength: "strong", whyTheyFit: "Oxford locksmith and security heritage makes the knight/guardian metaphor relevant.", status: "not_contacted" },
       { companyName: "Oxford Security Services", priority: 2, fitStrength: "good", whyTheyFit: "Local security company where visible protection is directly aligned.", status: "not_contacted" },
@@ -98,7 +98,7 @@ export const opportunities = {
     campaignFamilyId: "ticket-to-your-town",
     companyLogo: "NCP",
     password: "ticket",
-    pitchAdmin: { status: "draft", contact: { name: "", role: "", company: "NCP", email: "", linkedinUrl: "", notes: "Potential local partnerships / brand team route" }, createdAt: "2026-06-19", sentAt: "", followUpAt: "", lastContactedAt: "", notes: "Ticket To Your Town concept.", tags: ["parking", "town-centre", "partnerships"] },
+    pitchAdmin: { status: "draft", contactName: "", contactRole: "", contactEmail: "", contactPhone: "", contactLinkedIn: "", lastContactDate: "", lastContactMethod: "", nextFollowUpDate: "", relationshipNotes: "Potential local partnerships / brand team route", activityLog: [], contact: { name: "", role: "", company: "NCP", email: "", linkedinUrl: "", notes: "Potential local partnerships / brand team route" }, createdAt: "2026-06-19", sentAt: "", followUpAt: "", lastContactedAt: "", notes: "Ticket To Your Town concept.", tags: ["parking", "town-centre", "partnerships"] },
     alternativeTargets: [
       { companyName: "APCOA", priority: 1, fitStrength: "strong", whyTheyFit: "Major parking operator with similar civic/customer journey opportunity.", status: "not_contacted" },
       { companyName: "Q-Park", priority: 2, fitStrength: "good", whyTheyFit: "Premium parking operator where customer experience positioning may fit.", status: "not_contacted" },
