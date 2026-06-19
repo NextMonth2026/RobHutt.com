@@ -11,6 +11,8 @@ async function buildAll() {
   console.log("copying static site...");
   await cp("robhutt-com/index.html", "dist/public/index.html");
   await cp("robhutt-com/opportunity.html", "dist/public/opportunity.html");
+  await cp("robhutt-com/admin-pitches.html", "dist/public/admin-pitches.html");
+  await cp("robhutt-com/admin-pitch-detail.html", "dist/public/admin-pitch-detail.html");
   await cp("robhutt-com/assets", "dist/public/assets", { recursive: true });
 
   const opportunityData = await readFile("robhutt-com/assets/js/opportunities.js", "utf8");
