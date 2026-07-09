@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Interface Is Disappearing. That Is Where the Interesting Work Begins. | Rob Hutt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://robhutt.com/articles/the-interface-is-disappearing">
+<meta name="description" content="AI agents, AI search and conversational interfaces are changing product experience. Rob Hutt explores why the future belongs to human-centred, story-led technology.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Interface Is Disappearing. That Is Where the Interesting Work Begins.">
+<meta property="og:description" content="AI agents and AI search are changing the shape of digital experience. The opportunity is to design technology that guides, adapts and knows when to get out of the way.">
+<meta property="og:url" content="https://robhutt.com/articles/the-interface-is-disappearing">
+<meta property="og:site_name" content="Rob Hutt">
+<meta property="og:image" content="https://robhutt.com/assets/img/og.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Interface Is Disappearing. That Is Where the Interesting Work Begins.">
+<meta name="twitter:description" content="Why AI Agents Are Changing Product Experience, Storytelling and Human-Centred Technology">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Interface Is Disappearing. That Is Where the Interesting Work Begins.",
+  "description": "AI agents, AI search and conversational interfaces are changing product experience. Rob Hutt explores why the future belongs to human-centred, story-led technology.",
+  "author": {
+    "@type": "Person",
+    "name": "Rob Hutt",
+    "url": "https://robhutt.com"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Rob Hutt"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://robhutt.com/articles/the-interface-is-disappearing"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --ink:#0d0b08;
+    --paper:#f4efe6;
+    --paper-2:#e9e1d3;
+    --gold:#c8962a;
+    --gold-bright:#e8b13d;
+    --rust:#9a3a1f;
+    --line:rgba(13,11,8,.14);
+    --line-light:rgba(244,239,230,.18);
+    --mono:'Spline Sans Mono',ui-monospace,monospace;
+    --display:'Fraunces',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--display);
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    line-height: 1.6;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+    opacity:.04;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  a{color:inherit; transition: color 0.3s;}
+  a:hover{color: var(--gold);}
+
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 6vw;
+    mix-blend-mode:difference;color:#fff;
+  }
+  nav .mark{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+  nav .navlinks{display:flex;gap:26px;align-items:center}
+  nav .navlinks a{
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:#fff;text-decoration:none;opacity:.82;transition:opacity .3s;
+  }
+  nav .navlinks a:hover{opacity:1}
+
+  .article-hero{
+    padding: 20vh 6vw 10vh;
+    background: linear-gradient(180deg,#15110b 0%, #1c160d 100%);
+    color: var(--paper);
+    text-align: center;
+  }
+  .article-hero .eyebrow{
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 24px;
+  }
+  .article-hero h1{
+    font-weight: 300;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    max-width: 25ch;
+    margin: 0 auto;
+  }
+  .article-hero h1 em{ font-style: italic; font-weight: 900; color: var(--gold-bright); }
+
+  .content-wrap{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10vh 6vw;
+  }
+  .content-wrap p{
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: rgba(13,11,8,.85);
+    font-weight: 300;
+  }
+  .content-wrap h2{
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin: 4rem 0 1.5rem;
+    line-height: 1.2;
+  }
+  .content-wrap h2 em{ font-style: italic; color: var(--gold); }
+  .content-wrap blockquote{
+    border-left: 3px solid var(--gold);
+    padding-left: 2rem;
+    margin: 3rem 0;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--ink);
+  }
+  .content-wrap ul{
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+  }
+  .content-wrap li{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+
+  .cta-section{
+    background: var(--paper-2);
+    padding: 10vh 6vw;
+    text-align: center;
+    border-radius: 6px;
+    margin: 0 6vw 10vh;
+  }
+  .cta-section h3{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+  .cta-section .btn{
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 34px;
+    border-radius: 3px;
+    background: var(--ink);
+    color: var(--paper);
+    transition: transform 0.35s, background 0.35s;
+  }
+  .cta-section .btn:hover{
+    transform: translateY(-3px);
+    background: var(--gold);
+  }
+
+  footer{
+    padding:40px 6vw;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
+    font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:rgba(13,11,8,.55);text-transform:uppercase;
+  }
+
+  @media(max-width:760px){
+    .article-hero{ padding-top: 15vh; }
+    .content-wrap{ padding-top: 5vh; }
+    .content-wrap p{ font-size: 1.15rem; }
+    .content-wrap h2{ font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+<nav aria-label="Primary">
+  <a class="mark" href="/">Rob Hutt</a>
+  <div class="navlinks">
+    <a href="/#journey">Journey</a>
+    <a href="/#products">Products</a>
+    <a href="/#thinking">Thinking</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="eyebrow">Thinking / June 2026</div>
+  <h1>The Interface Is Disappearing. That Is Where the <em>Interesting Work</em> Begins.</h1>
+</header>
+
+<main class="content-wrap">
+  <p>The screen has been the boundary of our digital lives for so long that we've started to mistake the window for the view. We've spent decades training our eyes to hunt for the right button, our fingers to master the specific cadence of a double-click, and our minds to map the labyrinthine geography of nested menus and hidden sidebars.</p>
+
+  <p>But the window is starting to dissolve. The hard edges of the "user interface" as we know it are softening, turning into something more fluid, more relational, and significantly more active.</p>
+
+  <p>If you've watched Google's May 2026 update to Search, you've seen the first major tremors of this shift. We are moving from a world where we "use" software to a world where software acts on our behalf. The search box is no longer a tool for finding a list of links; it is becoming an agent that plans your travel, organises your research and anticipates your intent. The browser is evolving from a passive window into an active assistant.</p>
+
+  <h2>We spent years teaching people to <em>behave like software</em></h2>
+
+  <p>For a generation, the burden of digital interaction has sat squarely on the shoulders of the human user. If you wanted to get something done, you had to know exactly what you wanted, where the software kept the tools for that task and how to phrase your request in a way the machine could parse.</p>
+
+  <p>We built forms, dashboards and ticket systems. We wrote FAQs for when those systems inevitably confused people. We created portals and "customer experiences" that were really just administrative hurdles dressed up in brand colours. In short, we forced humans to learn the language of databases and file structures just to book a holiday or file an expense report.</p>
+
+  <p>Good product experience should reduce that burden, not add to it. The great irony of the "Information Age" is how much of our cognitive energy we've spent managing the tools rather than doing the work.</p>
+
+  <h2>Agents change the <em>shape of interaction</em></h2>
+
+  <p>This is where AI agents start to shift the landscape. Unlike the chatbots of 2023, which mostly just hallucinated polite nonsense, the agentic systems emerging in 2026 (powered by models like Claude 5) are designed for action. They don't just talk; they do.</p>
+
+  <p>An agent understands a goal, identifies the tools required to achieve it, and executes a sequence of steps to get there. It carries context from one moment to the next. It doesn't ask you to fill in the same information three times; it remembers who you are and what you're trying to achieve.</p>
+
+  <p>When the software understands your intent, the need for a complex visual interface starts to evaporate. Why navigate through five screens to change a subscription when you can simply state the outcome you want? When interaction becomes agentic, the "dashboard" starts to feel like a relic of a more difficult time.</p>
+
+  <blockquote>
+    "The next wave of digital experience will not be won by the people who bolt AI onto old interfaces. It will be won by people who understand product, story, emotion, trust and human behaviour well enough to design experiences that feel useful, alive and safe."
+  </blockquote>
+
+  <h2>But "agentic" does not automatically mean <em>"better"</em></h2>
+
+  <p>We are entering a dangerous period of "agentic clutter". Just as the early mobile web was plagued by intrusive pop-ups and useless apps, the agentic era will likely begin with pushy, opaque, and brittle assistants that interrupt our flow rather than supporting it.</p>
+
+  <p>A bad agent is like a pushy shop assistant who follows you around, guessing what you want and getting it wrong. Trust is the currency here. If software is going to act on our behalf, we need to know where the boundaries are. We need explainability, consent, and the ability to step in when things go sideways.</p>
+
+  <p>This is where relational AI becomes a design challenge. If software starts to feel social, or if it builds a "relationship" with the user over time, the responsibility of the designer doesn't disappear; it intensifies. We aren't just designing buttons anymore; we are designing permissions and personalities. We have to consider the long-term impact of these digital relationships. If a user begins to rely on an agent for emotional or professional support, the stakes of a system failure or a change in "personality" become much higher than a simple 404 error.</p>
+
+  <p>This shift requires a new kind of empathy. We need to move beyond "user testing" as a way to find where people click, and start "interaction testing" to see how people <em>feel</em> as they collaborate with a machine. It is the difference between testing a tool and testing a partnership.</p>
+
+  <h2>The real opportunity is <em>guided experience</em></h2>
+
+  <p>The opportunity is not to make every website a chatbot. Please, no. The world has suffered enough floating bubbles. The real opportunity is to design <em>guided experiences</em> that understand context and adapt to the person in front of them.</p>
+
+  <ul>
+    <li><strong>Adaptive Learning:</strong> Imagine training and induction content that doesn't just play a video, but adapts to what the learner already knows, guiding them through complexity without making them feel stupid.</li>
+    <li><strong>Story Worlds:</strong> Marketing experiences that behave less like brochures and more like conversations, where characters help people explore an idea or a product in their own way.</li>
+    <li><strong>Human-Centred Education:</strong> Tools that support curiosity and assessment by understanding a student's developmental journey, rather than just marking their performance against a static rubric.</li>
+    <li><strong>Intelligent Onboarding:</strong> Software that explains itself in plain English as you use it, revealing its power only when you need it.</li>
+  </ul>
+
+  <p>This is the territory where I spend my time: building <a href="/#products">Interactive Cinematic Experiences</a> and human-centred products where story, technology and usefulness meet. The goal is to create moments that feel alive, not systems that feel like homework. When we design for intent rather than just for clicks, we open up a world of possibilities for how people learn, work and play.</p>
+
+  <p>In my work with Flashbuzz on training and induction content, we've seen how much more effective it is when a user feels guided through a complex process rather than just being shouted at by a static video. The same applies to marketing and product onboarding. The interface shouldn't be a barrier to entry; it should be the hand that helps you across the threshold.</p>
+
+  <h2>Why storytellers may <em>have an advantage</em></h2>
+
+  <p>For years, the tech industry has valued engineering and logic above all else. But in a world where the interface is disappearing into conversation and agency, the skills of the storyteller are becoming the primary skills of the product designer.</p>
+
+  <p>Storytellers understand attention. They understand pacing, emotion, character, and motivation. They know how to carry context through a narrative arc. They understand that a relationship is built on a series of meaningful moments, not a series of successful transactions. In a story, every scene has a purpose, and every character has an intent. When we apply this to product design, the "agent" becomes a character in the user's story, and the "product experience" becomes the narrative journey they take together.</p>
+
+  <p>This isn't about adding "gamification" or shallow gimmicks. It's about using the ancient tools of narrative to solve the modern problems of complexity. A good story reduces the noise and focuses on the signal. A good agent should do the same.</p>
+
+  <p>The future interface may feel more like a scene, a guide, or a relationship than a page. To design those moments well, you need more than just a background in computer science; you need to understand the human being on the other side of the glass. You need to understand the subtext of their actions and the emotional state they bring to the interaction.</p>
+
+  <h2>What teams <em>should do now</em></h2>
+
+  <p>If you're building products in this new landscape, don't start by rebuilding your whole site as a chatbot. Start by auditing the friction. Look for the moments where the user has to stop being a person and start being a piece of software.</p>
+
+  <ul>
+    <li><strong>Identify the stuck points:</strong> Where do your users get confused? Where do they have to do the "mental work" that the software should be doing for them? These are your primary opportunities for agentic intervention.</li>
+    <li><strong>Prototype small:</strong> Create one AI-native interaction that solves a specific problem. Test it with real people. Watch where the trust breaks.</li>
+    <li><strong>Design the boundaries:</strong> Before you build the "magic tricks", build the safety rails. How does the user stay in control?</li>
+    <li><strong>Measure usefulness, not novelty:</strong> Don't build it because it's "AI". Build it because it makes the person's life 10% easier or their day 10% better. Novelty wears off in a week; usefulness lasts a lifetime.</li>
+  </ul>
+
+  <p>We are at a point where the technology is finally catching up to our imaginations. But that doesn't mean we should let the technology lead. The most successful products of the next decade will be those that use this incredible new power to become more human, not less. They will be the ones that understand that the best interface is often the one that isn't there at all.</p>
+
+  <h2>Conclusion: Do not build a chatbot, <em>build a better moment</em></h2>
+
+  <p>The future is not a talking paperclip with better branding. It is technology that knows when to speak, when to guide, and when to get out of the way. It is software that respects our attention and understands our intent.</p>
+
+  <p>The interface is disappearing. And that is exactly where the most interesting, human, and important work of our careers begins.</p>
+</main>
+
+<section class="cta-section">
+  <h3>Want to build something more human?</h3>
+  <p>I help teams design and build products that live at the intersection of story and technology.</p>
+  <a href="/#contact" class="btn">Let's talk</a>
+</section>
+
+<footer>
+  <div>Rob Hutt, Banbury, UK</div>
+  <div>What should technology become next?</div>
+</footer>
+</body>
+</html>
