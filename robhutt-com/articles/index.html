@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal | Rob Hutt</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,900&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://robhutt.com/articles">
+<meta name="description" content="Writing from Rob Hutt on AI agents, human-centred products, story-led technology and the changing shape of digital experience.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Journal | Rob Hutt">
+<meta property="og:description" content="Writing from Rob Hutt on AI agents, human-centred products and story-led technology.">
+<meta property="og:url" content="https://robhutt.com/articles">
+<meta property="og:site_name" content="Rob Hutt">
+<meta property="og:image" content="https://robhutt.com/assets/img/og.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Journal | Rob Hutt">
+<meta name="twitter:description" content="Writing from Rob Hutt on AI agents, human-centred products and story-led technology.">
+
+<style>
+  :root{
+    --ink:#0d0b08;
+    --paper:#f4efe6;
+    --paper-2:#e9e1d3;
+    --gold:#c8962a;
+    --gold-bright:#e8b13d;
+    --rust:#9a3a1f;
+    --line:rgba(13,11,8,.14);
+    --line-light:rgba(244,239,230,.18);
+    --mono:'Spline Sans Mono',ui-monospace,monospace;
+    --display:'Fraunces',Georgia,serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--display);
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    line-height: 1.6;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+    opacity:.04;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  a{color:inherit; transition: color 0.3s;}
+  a:hover{color: var(--gold);}
+
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:22px 6vw;
+    mix-blend-mode:difference;color:#fff;
+  }
+  nav .mark{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none}
+  nav .navlinks{display:flex;gap:26px;align-items:center}
+  nav .navlinks a{
+    font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    color:#fff;text-decoration:none;opacity:.82;transition:opacity .3s;
+  }
+  nav .navlinks a:hover{opacity:1}
+
+  .journal-hero{
+    padding: 20vh 6vw 8vh;
+    background: linear-gradient(180deg,#15110b 0%, #1c160d 100%);
+    color: var(--paper);
+    text-align: center;
+  }
+  .journal-hero .eyebrow{
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 24px;
+  }
+  .journal-hero h1{
+    font-weight: 300;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    max-width: 20ch;
+    margin: 0 auto;
+  }
+  .journal-hero h1 em{ font-style: italic; font-weight: 900; color: var(--gold-bright); }
+  .journal-hero p{
+    max-width: 46ch;
+    margin: 28px auto 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(244,239,230,.78);
+  }
+
+  .journal-list{
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 10vh 6vw;
+  }
+  .post{
+    display: block;
+    text-decoration: none;
+    padding: 3.2rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .post:first-child{ border-top: 1px solid var(--line); }
+  .post .meta{
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: rgba(13,11,8,.55);
+    margin-bottom: 1.2rem;
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .post .meta .tag{ color: var(--gold); }
+  .post h2{
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    transition: color 0.3s;
+  }
+  .post h2 em{ font-style: italic; color: var(--gold); }
+  .post:hover h2{ color: var(--gold); }
+  .post p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: rgba(13,11,8,.8);
+    max-width: 62ch;
+  }
+  .post .more{
+    display: inline-block;
+    margin-top: 1.4rem;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  footer{
+    padding:40px 6vw;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
+    font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:rgba(13,11,8,.55);text-transform:uppercase;
+  }
+
+  @media(max-width:760px){
+    .journal-hero{ padding-top: 15vh; }
+    .journal-list{ padding-top: 6vh; }
+    .post{ padding: 2.4rem 0; }
+    .post p{ font-size: 1.1rem; }
+  }
+</style>
+</head>
+<body>
+<nav aria-label="Primary">
+  <a class="mark" href="/">Rob Hutt</a>
+  <div class="navlinks">
+    <a href="/#journey">Journey</a>
+    <a href="/#products">Products</a>
+    <a href="/#thinking">Thinking</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="journal-hero">
+  <div class="eyebrow">Journal</div>
+  <h1>Writing on story, <em>technology</em> and being human.</h1>
+  <p>Notes on AI agents, human-centred products and the changing shape of digital experience.</p>
+</header>
+
+<main class="journal-list">
+  <!--
+    To add a post: copy one <a class="post"> block, point href at the new
+    article, and fill in the meta, title, and excerpt. Newest post first.
+  -->
+  <a class="post" href="/articles/the-interface-is-disappearing">
+    <div class="meta"><span class="tag">Thinking</span><span>June 2026</span></div>
+    <h2>The Interface Is Disappearing. That Is Where the <em>Interesting Work</em> Begins.</h2>
+    <p>AI agents and AI search are changing the shape of digital experience. The opportunity is not to bolt chatbots onto everything, but to design technology that guides, adapts and knows when to get out of the way.</p>
+    <span class="more">Read the article &rarr;</span>
+  </a>
+</main>
+
+<footer>
+  <div>Rob Hutt, Banbury, UK</div>
+  <div>What should technology become next?</div>
+</footer>
+</body>
+</html>
