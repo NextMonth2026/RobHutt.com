@@ -12,6 +12,7 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "esbuild": "^0.25.0",
     "tsx": "^4.20.5"
   }

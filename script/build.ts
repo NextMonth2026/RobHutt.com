@@ -11,7 +11,10 @@ async function buildAll() {
   console.log("copying static site...");
   await cp("robhutt-com/index.html", "dist/public/index.html");
   await cp("robhutt-com/opportunity.html", "dist/public/opportunity.html");
+  await cp("robhutt-com/robots.txt", "dist/public/robots.txt");
+  await cp("robhutt-com/sitemap.xml", "dist/public/sitemap.xml");
   await cp("robhutt-com/admin", "dist/public/admin", { recursive: true });
+  await cp("robhutt-com/articles", "dist/public/articles", { recursive: true });
   await cp("robhutt-com/assets", "dist/public/assets", { recursive: true });
 
   const opportunityData = await readFile("robhutt-com/assets/js/opportunities.js", "utf8");
