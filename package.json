@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
-    "dev": "npm run build && npm run start"
+    "dev": "npm run build && npm run start",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "dependencies": {
     "express": "^5.1.0"
@@ -14,6 +16,7 @@
   "devDependencies": {
     "@playwright/test": "^1.61.1",
     "esbuild": "^0.25.0",
-    "tsx": "^4.20.5"
+    "tsx": "^4.20.5",
+    "wrangler": "^4.110.0"
   }
 }
